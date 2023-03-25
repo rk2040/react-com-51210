@@ -1,0 +1,12 @@
+
+.imgCarrito{
+    width: 3rem;
+    margin-right: 5px;
+}
+.contenedorCarrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: large;
+}
