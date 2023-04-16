@@ -1,0 +1,24 @@
+.contenedorItem{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: 1px solid #e3e1e1;
+    margin: 3rem;
+    padding: 2rem;
+}
+
+.imgDetail{
+    height: 40vw;
+    width: auto;
+    border-radius: 20px;
+}
+
+.infoDetail{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.infoDetail p{
+    margin: 2rem;
+    text-align: justify;
+}
