@@ -8,11 +8,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-      {/*
-        <NavBar/>
-      <ItemListContainer greeting="Bienvenidos a la Scaloneta" />
-      <ItemDetailContainer/>
-  */}
 
     <BrowserRouter>
       <NavBar/>
