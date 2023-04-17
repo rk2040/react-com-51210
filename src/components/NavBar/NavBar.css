@@ -3,7 +3,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-bottom: 10px solid rgb(0, 255, 255);
+    border-bottom: 1rem solid rgb(0, 255, 255);
     background-color: azure;
     opacity: 0.97;
     position: fixed;
@@ -14,15 +14,16 @@ header{
 }
 
 .imgLogo{
-    width: 75px;
+    width: 7.5rem;
     margin-right: 5%;
 }
 
 .textLogo{
     text-decoration: none;
-    font-size: x-large;
+    font-size: 3rem;
     font-weight: 700;
     color: rgb(3, 159, 159);
+    margin-left: 0.2rem;
 }
 
 nav{
@@ -31,7 +32,7 @@ nav{
 .navbar-toggler{
     background-color: rgb(0, 255, 255);
     color: rgb(3, 159, 159);
-    margin-left: 10px;
+    margin-left: 1rem;
     width: auto;
 }
 .navbar .container-fluid{
@@ -46,8 +47,9 @@ li{
     margin: 1rem;
 }
 li a{
+    font-size: 1.2rem;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     color: rgb(3, 159, 159);
 }
 li a:hover{
@@ -56,5 +58,6 @@ li a:hover{
 
 .nav-link{
     font-weight: 600;
+    font-size: 1.5rem;
     color: rgb(3, 159, 159);
 }

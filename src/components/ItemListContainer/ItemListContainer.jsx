@@ -17,8 +17,6 @@ const ItemListContainer = (props) => {
         const funcionProductos = idCategoria ? getProductosPorCategoria : getProducts;
 
 
-
-
         funcionProductos(idCategoria)
             .then(response => setProducts(response) )
             .catch(error => console.error(error) )

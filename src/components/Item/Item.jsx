@@ -1,19 +1,18 @@
 import React from 'react'
 import './Item.css'
-// import Contador from '../Contador/Contador'
 
 import { Link } from 'react-router-dom'
 
-const Item = ({id, nombre, precio, img}) => {
+const Item = ({id, nombre, precio, img, idCat}) => {
     return (
         <div className='cartProducto'>
             <img className='imgProducto' src={img} alt={nombre} />
-            <h3>{nombre}</h3>
-            <p>Precio: $ {precio}</p>
-            <p>ID: {id}</p>            
+            <h3 className='nombreProducto'>{nombre}</h3>
+            <p className='precioProducto'>Precio: $ {precio}</p>
+            <p>Categoria: {idCat}</p>
+            {/* <p>ID: {id}</p>             */}
             
             <Link className='linkProducto' to={`/item/${id}`}> Ver Detalle </Link>
-            {/* <Contador/> */}
         </div>
     )
 }

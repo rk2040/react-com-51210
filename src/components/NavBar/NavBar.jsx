@@ -5,7 +5,7 @@ import CartWidget from "../CartWiget/CartWidget";
 import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
-    const imgLogo = "https://catdogpets.netlify.app/assets/img/logos/logoNav.svg";
+    const imgLogo = "../img/logoNav.png";
 
     return (
         <header>
@@ -21,10 +21,10 @@ const NavBar = () => {
                         <ul className="navbar-nav">
                             
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Equipo</a>
+                            <Link className="nav-link" to='/nosotros'>Nosotros</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Titulos</a>
+                            <Link className="nav-link" to='/cuidados'>Cuidados</Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Tienda</a>

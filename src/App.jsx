@@ -20,7 +20,10 @@ function App() {
         <Route path='/' element={ <ItemListContainer/> }/>
         <Route path='/categoria/:idCategoria' element={ <ItemListContainer/> }/>
         <Route path='/item/:idItem' element={ <ItemDetailContainer/> }/>
-        <Route path='*' element={ <h2>Sitio en Construccion</h2> }/>
+        <Route path='*' element={ <div className='contenedorConstruccion'> 
+          <h2 className='sitioEnContruccion'>Sitio en Construcción</h2> 
+          <img className='imgEnConstruccion' src="https://static.vecteezy.com/system/resources/previews/000/192/096/original/vector-website-under-construction.png" alt="Sitio en Construccion" />
+          </div>}/>
 
       </Routes>
     
