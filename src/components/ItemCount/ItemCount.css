@@ -1,3 +1,4 @@
+/* btn contados / agregar al carrito */
 .contador{
     display: flex;
     margin-top: 1.5rem;
@@ -36,5 +37,5 @@ button:hover{
     background-color: rgb(1, 135, 91);
     transform: scale(1.05);
     transition: all 0.3s;
-    
+
 }

@@ -21,16 +21,22 @@ const NavBar = () => {
                         <ul className="navbar-nav">
                             
                             <li className="nav-item">
-                            <Link className="nav-link" to='/nosotros'>Nosotros</Link>
+                            <NavLink className="nav-link" to={`/tienda`}>Tienda</NavLink>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to='/cuidados'>Cuidados</Link>
+                            <NavLink className="nav-link" to={`/categoria/gato`}>Productos para Gatos</NavLink>
                             </li>
-                            <li className="nav-item dropdown">
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to={`/categoria/perro`}>Productos para Perros</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to={`/veterinaria`}>Veterinaria</NavLink>
+                            </li>
+                            {/* <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Tienda</a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li>
-                                        <NavLink to={`/`}>Todos los Productos</NavLink>
+                                        <NavLink to={`/tienda`}>Todos los Productos</NavLink>
                                     </li>
                                     <li>
                                         <NavLink to={`/categoria/gato`}>Productos para Gatos</NavLink>
@@ -39,7 +45,7 @@ const NavBar = () => {
                                         <NavLink to={`/categoria/perro`}>Productos para Perros</NavLink>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
 

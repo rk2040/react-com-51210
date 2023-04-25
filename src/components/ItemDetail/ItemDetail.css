@@ -1,3 +1,4 @@
+/* Page agregar al carrito (btn seguir viendo) / terminar compra */
 .contenedorItem{
     width: auto;
     display: flex;
@@ -31,4 +32,24 @@
     font-size: 3rem;
     font-weight: bold;
     text-align: justify;
+}
+
+.btnAddCarrito{
+    margin-top: 1rem;
+    background-color: rgb(1, 181, 121);
+    color: azure;
+    font-size: 1.5rem;
+    width: 15rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.btnAddCarrito:hover{
+    background-color: rgb(1, 135, 91);
+    transform: scale(1.05);
+    transition: all 0.3s;
+    
 }

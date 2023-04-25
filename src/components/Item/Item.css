@@ -1,4 +1,5 @@
-.cartProducto{
+/* card de los productos */
+.cardProducto{
     background-color: rgb(219, 219, 219);
     border-radius: 1rem;
     width: 25rem;
@@ -10,28 +11,20 @@
     justify-content: space-between;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-.cartProducto h3{
-    text-align: center;
-}
 .imgProducto{
     width: 15rem;
     object-fit: contain;
     border-radius: 0.8rem;
     margin-bottom: 0.5rem;
 }
-
-.btnProducto{
-    background-color: rgb(1, 181, 121);
-    color: azure;
-    font-size: 1.2rem;
-    width: 8rem;
-    border-radius: 0.8rem;
-    border: none;
-    cursor: pointer;
+.nombreProducto{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-
-.btnProducto:hover{
-    background-color: rgb(1, 135, 91);;
+.precioProducto{
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .linkProducto{
@@ -51,12 +44,4 @@
     background-color: rgb(1, 135, 91);
     transform: scale(1.1);
     transition: all 0.3s;
-}
-
-.nombreProducto{
-    font-size: large;
-}
-.precioProducto{
-    font-size: 2rem;
-    font-weight: bold;
 }

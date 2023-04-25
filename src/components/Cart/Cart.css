@@ -1,0 +1,44 @@
+/* cart no hay productos */
+
+.contenedorCarritoVacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.linkBtnCarrito{
+    width: 14rem;
+    padding: 0 0.5rem 0 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: azure;
+    background-color: rgb(1, 181, 121);
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    align-items: flex-end;
+}
+.linkBtnCarrito:hover{
+    background-color: rgb(1, 135, 91);
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+.contenedorCarritoFinal{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 2rem;
+    gap: 1rem;
+    white-space: nowrap;
+}
+.precioTotal{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.noHayProductos{
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(3, 159, 159);
+}
