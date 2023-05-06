@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 //Creamos un Obj con toda nuestra informacion de la cuenta de la base de datos.
 const firebaseConfig = {
-    apiKey: "AIzaSyDmzvI_AkKl_HnSaQ_bpva0gHS1WWM_EJM",
-    authDomain: "proyectoreact-9dfc1.firebaseapp.com",
-    projectId: "proyectoreact-9dfc1",
-    storageBucket: "proyectoreact-9dfc1.appspot.com",
-    messagingSenderId: "672947051911",
-    appId: "1:672947051911:web:7d4c3bad6ef20d95b48722"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 // Inicializamos Firebase y se pasa la configuracion como argumento. Esto devuelve una instanmcia de Firebase.
