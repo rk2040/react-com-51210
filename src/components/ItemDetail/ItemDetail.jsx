@@ -17,7 +17,7 @@ const ItemDetail = ( {id, nombre, precio, img, descripcion, idCat, stock} ) => {
         setAddCantidad(cantidad);
         //console.log("Productos agregados: " + cantidad); clase 11 ya no lo necesitamos
         // Creo un obj con el item y la cantidad. clase 11
-        const item = {id, nombre, precio};
+        const item = {id, nombre, precio, img};
         addToCart(item, cantidad);
     }
 
@@ -26,10 +26,11 @@ const ItemDetail = ( {id, nombre, precio, img, descripcion, idCat, stock} ) => {
             <img className='imgDetail' src={img} alt={nombre} />
             <div className='infoDetail'>
                 <h2 className='dataDetail'>{nombre} </h2>
-                <h3 className='dataDetail'>Precio: $ {precio} </h3>
-                <h3>Categoria: {idCat}</h3>
+                <h3 className='dataDetail'>Precio: ${precio} </h3>
+                <h4>Categoria: {idCat}</h4>
                 <h4>ID: {id} </h4>
-                <p> {descripcion} </p>
+                <h4>Stock: {stock}</h4>
+                <p className='pDescripcion'>Descripcion: {descripcion} </p>
                 {
                     addCantidad > 0 ? (<Link  className='btnAddCarrito' to='/cart'> Terminar Compra </Link>) : (<ItemCount inicial={1} stock={stock} onAdd={handlerCantidad} />)
                 }

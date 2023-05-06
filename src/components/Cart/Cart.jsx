@@ -6,6 +6,7 @@ import { CarritoContext } from '../../context/CarritoContext'
 import CartItem from '../CartItem/CartItem'
 
 
+
 const Cart = () => {
     const {carrito, emptyCart} = useContext(CarritoContext);
 
@@ -28,7 +29,7 @@ const Cart = () => {
         <div className='contenedorCarritoFinal'>
             <Link className='linkBtnCarrito' to='/tienda'> Seguir Viendo </Link>
             <button className='linkBtnCarrito' onClick={()=> emptyCart()} > Vaciar Carrito </button>
-            <Link className='linkBtnCarrito' to='/checkout'> Finalizar Compra </Link>
+            <Link className='linkBtnCarrito' to='/Checkout' > Finalizar Compra </Link>
             <h3 className='precioTotal'> Total: ${total} </h3>
         </div>
         </>

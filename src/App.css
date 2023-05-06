@@ -14,11 +14,25 @@ html{
 .App {
     text-align: center;
 }
+
+
+/* menor a 200px empieza a romper */
 body{
-    padding-top: 225px;
+    padding-top: 20rem;
 }
 
 .contenedorProductos{
     margin-left: 10%;
     margin-right: 10%;
+}
+
+@media(min-width: 228px){
+    body{
+        padding-top: 16rem;
+    }
+}
+@media(min-width: 576px){
+    body{
+        padding-top: 10rem;
+    }
 }

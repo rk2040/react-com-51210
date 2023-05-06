@@ -1,4 +1,4 @@
-const productos = [
+/* const productos = [
     {
         id: "1",
         nombre: "Alimento Excellent Pollo y Arroz Adulto +7 - 15 Kg",
@@ -220,14 +220,15 @@ const productos = [
         stock: 10,
         descripcion: "El Kong clásico es el estándar Violeta de los juguetes de gato y ofrece un enriquecimiento a los gatos al ayudarlos a satisfacer sus necesidades instintivas. Su fórmula es ultra durable y tiene un pique impredecible para jugar con las mascotas. Enseña a masticar de manera correcta, a la vez enriqueciendo mentalmente a los gatos. La goma de los juguetes. Goma natural."
     }
-]
+] */
 
+/* 
 //export antes de const, para poder exportar la funcion (la exporto a ItemListContainer)
 export const getProducts = ()=> {
     return new Promise( (resolve) => {
         setTimeout( ()=> {
             resolve(productos);
-        }, 500)
+        }, 5)
     })
 }
 
@@ -238,7 +239,7 @@ export const getUnProducto = (id) => {
         setTimeout( ()=> {
             const producto = productos.find(prod => prod.id === id);
             resolve(producto);
-        }, 500)
+        }, 5)
     })
 }
 
@@ -248,6 +249,8 @@ export const getProductosPorCategoria = (idCategoria)=> {
         setTimeout( ()=> {
             const productosCategoria = productos.filter(prod => prod.idCat === idCategoria);
             resolve(productosCategoria);
-        }, 500)
+        }, 5)
     })
 }
+
+ */

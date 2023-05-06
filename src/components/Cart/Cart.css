@@ -5,6 +5,13 @@
     flex-direction: column;
     align-items: center;
 }
+.noHayProductos{
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(3, 159, 159);
+    text-align: center;
+}
+
 .linkBtnCarrito{
     width: 14rem;
     padding: 0 0.5rem 0 0.5rem;
@@ -24,8 +31,11 @@
     transform: scale(1.1);
     transition: all 0.3s;
 }
+
+
 .contenedorCarritoFinal{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: end;
     margin: 2rem;
@@ -37,8 +47,42 @@
     font-weight: bold;
 }
 
-.noHayProductos{
-    font-size: 4rem;
-    font-weight: bold;
-    color: rgb(3, 159, 159);
+
+@media(min-width: 576px){
+    .contenedorCarritoFinal{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media(min-width: 768px){
+
+}
+
+@media(min-width: 1024px){
+    .contenedorCarritoVacio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .noHayProductos{
+        font-size: 4rem;
+        font-weight: bold;
+        color: rgb(3, 159, 159);
+    }
+
+
+    .contenedorCarritoFinal{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin: 2rem;
+        gap: 1rem;
+        white-space: nowrap;
+    }
+    .precioTotal{
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    
 }

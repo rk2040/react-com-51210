@@ -2,16 +2,16 @@
 .contenedorItem{
     width: auto;
     display: flex;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
     border: 2px solid #e3e1e1;
     border-radius: 1rem;
-    margin: 3.5rem;
-    padding: 2.5rem;
+    margin: 1rem;
 }
 
 .imgDetail{
-    height: 40vw;
-    width: auto;
+    width: 60vw;
     border-radius: 2rem;
 }
 
@@ -20,18 +20,18 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
     text-align: justify;
-    margin: 3rem;
+    margin: 1.5rem;
 }
 .infoDetail p{
     font-size: 1.5rem;
-    margin: 3rem;
+    margin: 0.5rem;
+    text-align: left;
 }
 .dataDetail{
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    text-align: justify;
+    text-align: center;
 }
 
 .btnAddCarrito{
@@ -52,4 +52,61 @@
     transform: scale(1.05);
     transition: all 0.3s;
     
+}
+
+@media(min-width: 576px){
+    .contenedorItem{
+        margin: 1.5rem;
+    }
+    .imgDetail{
+        height: auto;
+        border-radius: 2rem;
+    }
+    .dataDetail{
+        font-size: 2.5rem;
+    }
+}
+
+@media(min-width: 768px){
+    .contenedorItem{
+        margin: 3.5rem;
+    }
+
+    .imgDetail{
+        width: 60vw;
+        border-radius: 2rem;
+    }
+    
+    .infoDetail p{
+        font-size: 1.8rem;
+        margin: 2.5rem;
+    }
+}
+
+@media(min-width: 1024px){
+    .contenedorItem{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        border-radius: 1rem;
+        margin: 3.5rem;
+        padding: 2.5rem;
+    }
+
+    .imgDetail{
+        width: 40vw;
+        max-width: 70rem;
+    }
+    
+    .infoDetail p{
+        font-size: 2rem;
+    }
+    .dataDetail{
+        font-size: 3.5rem;
+    }
+
+    .infoDetail h4{
+        font-size: 2rem;
+    }
 }

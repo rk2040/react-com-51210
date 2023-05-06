@@ -2,10 +2,26 @@ import React from 'react'
 import './CartItem.css'
 import { useContext } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
+import Swal from 'sweetalert2'
 
 
 const CartItem = ( {item, cantidad} ) => {
     const {deleteToCart} = useContext(CarritoContext);
+
+    const eliminoDelCarrito= ()=> {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se elimino ' + cantidad +' '+ item.nombre + ' del carrito',
+            showConfirmButton: false,
+            timer: 1000
+        })
+    }
+
+    const handlerAgregardoAlCarrito = ()=> {
+        deleteToCart(item.id);
+        eliminoDelCarrito();
+    }
     
     return (
         <div className='contenedorProductoCart'>
@@ -20,7 +36,7 @@ const CartItem = ( {item, cantidad} ) => {
             <div className='precioProductoCart'>
                 <p> Cantidad: {cantidad} </p>
                 <p> Precio: ${item.precio} </p>
-                <button className='btnEliminar' onClick={()=> deleteToCart(item.id) }> Eliminar </button>
+                <button className='btnEliminar' onClick={ handlerAgregardoAlCarrito }> Eliminar </button>
             </div>
         </div>
     )
