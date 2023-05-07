@@ -1,16 +1,73 @@
 
+.checkoutFomr{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 3rem;
+    background-color: aqua;
+    color: rgb(3, 159, 159);
+    font-weight: bold;
+    width: 100vw;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 form{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center ;
-    row-gap: 1rem;
+    row-gap: 2rem;
 }
 
 .dataForm{
+    width: 100%;
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center ;
+    align-items: center;
+    min-width: none;
+    overflow: auto;
+}
+
+.labelForm{
+    font-size: 1.5rem;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.inputForm{
+    width: 90%;
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 0.4rem solid aqua;
+    outline: none;
+    margin-bottom: 2rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+.btnComprar{
+    width: 14rem;
+    padding: 0 0.5rem 0 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: azure;
+    background-color: rgb(1, 181, 121);
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    align-items: flex-end;
+}
+.btnComprar:hover{
+    background-color: rgb(1, 135, 91);
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.numeroOrden{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
 }

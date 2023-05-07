@@ -6,8 +6,9 @@
     width: auto;
 }
 .sitioEnContruccion{
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    text-align: center;
     color: rgb(3, 159, 159);
 }
 .imgEnConstruccion{
@@ -15,4 +16,11 @@
     max-width: 50rem;
     border-radius: 5rem;
     margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+@media(min-width: 576px){
+    .sitioEnContruccion{
+        font-size: 4rem;
+    }
 }

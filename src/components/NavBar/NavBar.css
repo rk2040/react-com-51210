@@ -17,7 +17,29 @@ header{
 
 .imgLogo{
     width: 7.5rem;
+    transition-property: all;
+    animation: agranda-logo 1s ;
 }
+@keyframes agranda-logo{
+    0%{
+        opacity: 0.0;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    100%{
+        transform: rotate(-360deg);
+        opacity: 1;
+    }
+}
+.imgLogo:hover{
+    transition-property: all;
+    transition-duration: 1s;
+    transform: scale(1.03);
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.3));
+}
+
+
 .textLogo{
     text-decoration: none;
     text-align: center;
@@ -25,6 +47,11 @@ header{
     font-weight: bold;
     color: rgb(3, 159, 159);
 }
+.textLogo:hover{
+    color: black;
+}
+
+
 .logoYTexto{
     display: flex;
     flex-direction: column;
