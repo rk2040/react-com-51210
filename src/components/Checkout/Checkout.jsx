@@ -1,5 +1,5 @@
 import './Checkout.css'
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import { db } from '../../services/firebase/config'
 import { Timestamp, addDoc, doc, collection, documentId, getDocs, query, updateDoc, where, writeBatch } from 'firebase/firestore'
