@@ -4,7 +4,6 @@ import { useContext } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import Swal from 'sweetalert2'
 
-
 const CartItem = ( {item, cantidad} ) => {
     const {deleteToCart} = useContext(CarritoContext);
 

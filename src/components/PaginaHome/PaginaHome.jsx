@@ -11,7 +11,6 @@ const PaginaHome = () => {
     return (
         <div className='contenedorHome'>
             <div className='contenedorImgHome'>
-                {/* <h1>Home</h1> */}
                 <div className='cuadroImg'>
                     <Link className='imgPet' to='/tienda'> <img src={homeTienda} alt="Tienda" />
                     <h2 className='textoImgHome'>Toda la Tienda</h2> </Link>

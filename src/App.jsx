@@ -12,7 +12,6 @@ import { CarritoProvider } from './context/CarritoContext';
 function App() {
   return (
     <>
-
     <BrowserRouter>
       <CarritoProvider>
         <NavBar/>

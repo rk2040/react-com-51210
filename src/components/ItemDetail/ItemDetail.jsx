@@ -1,22 +1,17 @@
 import './ItemDetail.css';
-import { useState, useContext } from 'react'; // useContext en clase 11
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 
-import { CarritoContext } from '../../context/CarritoContext'; //clase 11
+import { CarritoContext } from '../../context/CarritoContext';
 
 const ItemDetail = ( {id, nombre, precio, img, descripcion, idCat, stock} ) => {
-    //1- Creamos un estado con la cantidad de productos agregados.
     const [addCantidad, setAddCantidad] = useState(0);
 
-    //Uso Hook useContext para traer las funciones que necesitamos. clase 11
     const {addToCart} = useContext(CarritoContext);
 
-    //2- Creamos una funcion manejadora de la cantidad.
     const handlerCantidad = (cantidad)=> {
         setAddCantidad(cantidad);
-        //console.log("Productos agregados: " + cantidad); clase 11 ya no lo necesitamos
-        // Creo un obj con el item y la cantidad. clase 11
         const item = {id, nombre, precio, img};
         addToCart(item, cantidad);
     }

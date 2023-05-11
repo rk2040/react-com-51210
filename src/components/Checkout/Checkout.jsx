@@ -51,19 +51,16 @@ const Checkout = () => {
     const handleSubmit = (event)=> {
         event.preventDefault();
 
-        //Validamos que los campos esten completos
         if(!nombre || !apellido || !telefono || !email || !emailConfirmacion){
             setError("Complete todos los campos.");
             return;
         }
 
-        //Validamos que el email coincida
         if(email !== emailConfirmacion){
             setError("El email no coincide.")
             return;
         }
 
-        //Creamos el objeto de la orden
         const orden = {
             items: carrito.map( (producto)=> ({
                 id: producto.item.id,
@@ -71,7 +68,7 @@ const Checkout = () => {
                 cantidad: producto.cantidad,
                 precio: producto.item.precio,
             })),
-            total: carrito.reduce( //el total podria probar traerlo de carritoContext, para evitar hacer otra ves el mismo codigo. (probar)
+            total: carrito.reduce(
                 (total, producto)=> total + producto.item.precio * producto.cantidad, 0 ),
             nombre,
             apellido,
@@ -82,13 +79,12 @@ const Checkout = () => {
 
         orden.items.map(prod => (descuentaStock(prod.id, prod.cantidad)));
 
-        if(orden.items < 1){    // Compruebo si hay hay productos en en pepido para generar la orden
+        if(orden.items < 1){
             setError("Su carrito esta vacio.")
             console.log("Su carrito esta vacio.")
             return;
         }
-        //Guardamos la orden en la BBDD
-        //const confirmarOrden = ()=> {   // Agregue funcion confirmarOrden para usarla con validadores de cantidad de stock y demas
+
         addDoc(collection(db, "ordenes"), orden)
             .then( (docRef)=> {
                 setOrdenId(docRef.id);
@@ -117,7 +113,6 @@ const Checkout = () => {
         setTelefono("");
         setEmail("");
         setEmailConfirmacion("");
-
         setError("");
     }
 
