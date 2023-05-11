@@ -7,13 +7,15 @@ import { useParams } from 'react-router-dom'
 import { db } from '../../services/firebase/config';
 import { getDoc, doc } from 'firebase/firestore';
 
+import Spinner from '../Spinner/Spinner';
+
 const ItemDetailContainer = () => {
     const [producto, setProduct] = useState(null);
-
     const {idItem} = useParams();
+    const [loading, setLoading] = useState(false);
 
     useEffect( ()=> {
-        //setLoading(true);
+        setLoading(true);
 
         const nuevoDoc = doc(db, 'productos', idItem);
 
@@ -25,15 +27,17 @@ const ItemDetailContainer = () => {
                 setProduct(nuevoProducto);
             })
             .catch(error=> console.log(error))
-            // .finally( ()=> {
-            //     setLoading(false);
-            // })
+            .finally( ()=> {
+                setLoading(false);
+            })
 
     }, [idItem]);
 
     return (
         <div>
-            <ItemDetail {...producto} />
+            {
+                loading ? <Spinner/> : <ItemDetail {...producto} />
+            }
         </div>
     )
 }
