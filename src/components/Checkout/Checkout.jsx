@@ -19,7 +19,8 @@ const Checkout = () => {
 
     const btnComprar = <button className='btnComprar' type='submit'> Finalizar Compra </button>
     const btnSeguirViendo = <Link className='linkBtnCarrito' to='/tienda'> Seguir Viendo </Link>
-    const [verificado, setVerificado] = useState(true);
+    const [btnVerificado, btnSetVerificado] = useState(false);
+    const [stockSuficiente, setStockSuficiente] = useState(false);
 
     // Bajar stock ================================
     const [stockProductos, setStockProductos] = useState([]); 
@@ -40,10 +41,20 @@ const Checkout = () => {
         const productoref = doc(db, "productos", id)
         const productoAux = stockProductos.find(prod => prod.id === id)
 
-        if(productoAux){
+        if(productoAux && productoAux.stock >= cantidad){
             updateDoc(productoref, { stock: productoAux.stock - cantidad })
                 .then( ()=> console.log(`Se compro: ${productoref}`))
                 .catch( (error)=> console.log(error))
+                .finally(setStockSuficiente(true))
+        }
+        else{
+            Swal.fire({
+                position: 'top-end',
+                icon: 'warning',
+                title: `No hay stock de: ${productoAux.nombre} para completar la orden.`,
+                showConfirmButton: true
+            })
+            setStockSuficiente(false);
         }
     }
     // Bajar stock ================================
@@ -94,7 +105,7 @@ const Checkout = () => {
                     title: `${nombre} gracias por tu compra. Tu número de orden es: ${docRef.id}`
                     })
 
-                setVerificado(false);
+                btnSetVerificado(true);
                 emptyCart();
             })
             .catch( (error)=> {
@@ -105,6 +116,7 @@ const Checkout = () => {
                     icon: 'error',
                     title: 'Se produjo un error al generar la orden.',
                     })
+                btnSetVerificado(false);
             })
             
         setNombre("");
@@ -146,14 +158,12 @@ const Checkout = () => {
                     <label className='labelForm' htmlFor="">Confirmar Email</label>
                     <input className='inputForm' type="email" value={emailConfirmacion} onChange={(e)=> setEmailConfirmacion(e.target.value)} placeholder='tuemail@email.com'/>
                 </div>
-                {error && <p style={{color:'red'}} > {error} </p>}
+                { error && <p style={{color:'red'}} > {error} </p> }
 
-                { verificado ? btnComprar : btnSeguirViendo }
+                { !btnVerificado ? btnComprar : btnSeguirViendo }
             </form>
             {
-                ordenId && (
-                    <p className='numeroOrden'>Guarda tu número de orden para darle seguimiento. <br/> Tu número de orden es: <strong>{ordenId}</strong> </p>
-                )
+                !stockSuficiente ? <p></p> : ordenId && ( <p className='numeroOrden'>Guarda tu número de orden para darle seguimiento. <br/> Tu número de orden es: <strong>{ordenId}</strong> </p> )
             }
         </div>
     );

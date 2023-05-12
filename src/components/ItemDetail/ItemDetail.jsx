@@ -27,7 +27,7 @@ const ItemDetail = ( {id, nombre, precio, img, descripcion, idCat, stock} ) => {
                 <h4>Stock: {stock}</h4>
                 <p className='pDescripcion'>Descripcion: {descripcion} </p>
                 {
-                    addCantidad > 0 ? (<Link  className='btnAddCarrito' to='/cart'> Terminar Compra </Link>) : (<ItemCount inicial={1} stock={stock} onAdd={handlerCantidad} />)
+                    stock <= 0 ? <button className='btnSinStock' disabled> Sin Stock </button> : ( addCantidad > 0 ? (<Link  className='btnAddCarrito' to='/cart'> Terminar Compra </Link>) : (<ItemCount inicial={1} stock={stock} onAdd={handlerCantidad} />) )
                 }
                 
                 <Link  className='btnAddCarrito' to='/tienda'> Seguir Viendo </Link>

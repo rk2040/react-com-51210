@@ -8,13 +8,33 @@ export const CarritoProvider = ( {children} )=> {
 
     const [carrito, setCarrito] = useState([]); 
 
+    /* const alertAddToCart = (cant)=> {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se agrego ' + cant + ' producto/s al carrito',
+            showConfirmButton: false,
+            timer: 500
+        })
+    } */
+
     const addToCart = (item, cantidad)=> {
+        /* if(isInCart(item.id)){
+            setCarrito(carrito.map( (prod)=>{
+                if(prod.id === item.id) return {...prod, cantidad: prod.cantidad + cantidad}
+            }));
+            alertAddToCart(cantidad);
+        }
+        else{
+            setCarrito(previo => [...previo, {item, cantidad}] );
+            alertAddToCart(cantidad);
+        } */
         if( !isInCart(item.id) ){
             setCarrito(previo => [...previo, {item, cantidad}] );
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Se agrego ' + cantidad + ' producto/s al carrito',
+                title: `Se agrego  ${cantidad}  producto/s al carrito`,
                 showConfirmButton: false,
                 timer: 500
             })
@@ -23,15 +43,14 @@ export const CarritoProvider = ( {children} )=> {
             Swal.fire({
                 position: 'top-end',
                 icon: 'warning',
-                title: item.nombre + ' esta en cargado en el carrito',
-                showConfirmButton: false,
-                timer: 800
+                title: `${item.nombre}.  Ya esta agregado en el carrito`,
+                showConfirmButton: true,
             })
         }
     }
 
     const isInCart = (id)=> {
-        return carrito.some( (prod) => prod.item.id === id);
+        return carrito.some( prod => prod.item.id === id);
     }
 
     const deleteToCart = (id)=> {
