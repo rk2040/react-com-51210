@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Proyecto Final React Js comisión 51210
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Pardo Roberto
 
-## Available Scripts
+## https://catdogpets.netlify.app
 
-In the project directory, you can run:
+## CONTENIDO
+   
+* Introducción
+* Características principales
+* Tecnologias utilizadas
+* Tecnologias adicionales
+* Instalación
+* Requisitos del sistema
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Introducción
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Se desarrolla un proyecto de un e-commerce con las siguientes caracteristicas de funcionalidad:
+* Un usuario debe poder ingresar, navegar por los productos e ir a sus detalles.
+* Desde el detalle se debe poder ver la descripción, foto y precio e ingresarlo al carrito.
+* Una vez que el carrito tenga al menos un producto, se deberá visualizar un listado compacto de la orden con el precio total.
+* Al ingresar su nombre, apellido, teléfono e e-mail (ingresándolo dos veces para corroborar que sea correcto), debe activarse el botón de ‘realizar compra’.
+* Al clickear ‘realizar compra’ debe guardarse en la base de datos una orden que tenga todos los productos, la fecha y dar feedback del número de orden.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Características principales
 
-### `npm run build`
+* Componentes reutilizables de React Js.
+* Manejo de estado con el uso del hook useState. Manejo de hook useEffect, hook useContext.
+* Manejo de hook useEffect, hook useContext
+* Enrutamiento con React Router.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologias utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* HTML5
+* CSS3
+* JavaScript ECMAScript 6
+* React Js version 18.1
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tecnologias adicionales
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Biblioteca Bootstrap v5.3 para crear el Nav y el Nav hamburguesa (para dispositivos móviles).
+	Para obtener más información sobre cómo utilizar Bootstrap en tu proyecto, consulta la documentación oficial de Bootstrap en getbootstrap.com
+* Biblioteca SweetAlert2 para crear alertas personalizadas en lugar de las alertas por defecto de JavaScript. 
+	Para obtener más información sobre cómo utilizar SweetAlert2 en tu proyecto, consulta la documentación oficial de SweetAlert2 en sweetalert2.github.io
+* Biblioteca Animate On Scroll (AOS) para agregar efectos a las cards. 
+	Para obtener más información sobre cómo utilizar AOS en tu proyecto, consulta la documentación oficial de AOS en aos.js.org
+* Biblioteca Spinner v0.3.4 para mostrar un spinner de carga durante el tiempo que tarda en cargarse cierta información.
+	Para obtener más información sobre cómo utilizar Spinner en tu proyecto, consulta la documentación oficial de Spinner en spin.js.org
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Instalación
 
-## Learn More
+`1` Clona el repositorio en tu máquina local:https:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+	git clone https://github.com/rk2040/react-com-51210.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`2` Instala las dependencias utilizando npm:
 
-### Code Splitting
+	npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`3`  Inicia la aplicación:
 
-### Analyzing the Bundle Size
+	npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* La aplicación se iniciará en `http://localhost:3000`
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Requisitos del sistema
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* NodeJS
+* NPM
