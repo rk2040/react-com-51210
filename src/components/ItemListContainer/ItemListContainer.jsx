@@ -13,7 +13,7 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect( ()=> {
-        setLoading(true)
+        setLoading(true);
         const misProductos = idCategoria ? query(collection(db, 'productos'), where('idCat', '==', idCategoria)) : collection(db, 'productos');
 
         getDocs(misProductos)
@@ -23,11 +23,9 @@ const ItemListContainer = () => {
                     return {id: doc.id, ...data}
                 })
                 setProducts(nuevosProductos);
+                setLoading(false);
             })
             .catch(error=> console.log(error))
-            .finally( ()=> {
-                setLoading(false)
-            })
     }, [idCategoria]);
 
     return (
