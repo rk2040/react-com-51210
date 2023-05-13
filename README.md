@@ -8,6 +8,7 @@
    
 * Introducción
 * Características principales
+* Tecnologias utilizadas
 * Tecnologias adicionales
 * Instalación
 * Requisitos del sistema
