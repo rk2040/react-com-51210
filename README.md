@@ -27,7 +27,7 @@
 ## Características principales
 
 * Componentes reutilizables de React Js.
-* Manejo de estado con el uso del hook useState. Manejo de hook useEffect, hook useContext.
+* Manejo de estado con el uso del hook useState.
 * Manejo de hook useEffect, hook useContext
 * Enrutamiento con React Router.
 
